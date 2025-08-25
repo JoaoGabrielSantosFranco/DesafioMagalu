@@ -3,7 +3,6 @@ package dev.jfranco.magalu.entity;
 import jakarta.persistence.*;
 import lombok.Data;
 
-import javax.swing.event.ChangeEvent;
 import java.time.LocalDateTime;
 
 @Entity
