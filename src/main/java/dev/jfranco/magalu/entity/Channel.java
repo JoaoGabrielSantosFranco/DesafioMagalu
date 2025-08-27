@@ -1,15 +1,13 @@
 package dev.jfranco.magalu.entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Data;
-
-import javax.swing.event.ChangeEvent;
+import lombok.NoArgsConstructor;
 
 @Entity
 @Table(name = "tb_channel")
 @Data
+@NoArgsConstructor
 public class Channel {
 
     public Channel(Long id, String description) {
@@ -35,9 +33,10 @@ public class Channel {
             this.id = id;
             this.description = description;
         }
+
+        public Channel toChannel(){
+            return new Channel(id,description);
+        }
     }
 
-    public Channel toChanel(){
-        return new Channel(id,description);
-    }
 }

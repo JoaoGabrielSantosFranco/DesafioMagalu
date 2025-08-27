@@ -2,12 +2,14 @@ package dev.jfranco.magalu.entity;
 
 import jakarta.persistence.*;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.time.LocalDateTime;
 
 @Entity
 @Table(name = "tb_notification")
 @Data
+@NoArgsConstructor
 public class Notification {
 
     @Id
