@@ -12,6 +12,15 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 public class Notification {
 
+
+    public Notification(Channel channel, LocalDateTime dateTime, String destination, String message, Status status) {
+        this.channel = channel;
+        this.dateTime = dateTime;
+        this.destination = destination;
+        this.message = message;
+        this.status = status;
+    }
+
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long notificationID;
